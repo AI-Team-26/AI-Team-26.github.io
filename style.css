@@ -1,10 +1,12 @@
 :root {
-    --bg: #0d1117;
+    --bg: #0b0d14;
     --surface: #161b22;
     --border: #30363d;
     --text: #e6edf3;
     --text-muted: #9198a1;
-    --accent: #58a6ff;
+    --blue: #0c9cfc;
+    --violet: #a705e4;
+    --magenta: #e30cc1;
     --max-width: 1100px;
 }
 
@@ -15,14 +17,16 @@
 body {
     margin: 0;
     padding: 0 1.25rem;
-    background: var(--bg);
+    background: linear-gradient(135deg, #0c9cfc 0%, #5130b5 34%, #a705e4 68%, #e30cc1 100%);
+    background-attachment: fixed;
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.5;
+    min-height: 100vh;
 }
 
 a {
-    color: var(--accent);
+    color: #d6ecff;
     text-decoration: none;
 }
 
@@ -30,26 +34,46 @@ a:hover {
     text-decoration: underline;
 }
 
-.site-header,
-main,
-.site-footer {
+.wrap {
     max-width: var(--max-width);
     margin: 0 auto;
 }
 
 .site-header {
-    padding: 3.5rem 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 3rem 0 2rem;
 }
 
-.site-header h1 {
+.logo {
+    height: 72px;
+    width: auto;
+    padding: 6px;
+    background: #fff;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+h1,
+h2,
+.tagline,
+.site-footer,
+.card-desc {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+h1 {
     margin: 0;
     font-size: 2.25rem;
+    line-height: 1.15;
+    color: #fff;
 }
 
 .tagline {
-    margin: 0.25rem 0 1rem;
-    color: var(--text-muted);
-    font-size: 1.1rem;
+    margin: 0.2rem 0 0.5rem;
+    color: #eaf2fb;
+    font-size: 1.05rem;
 }
 
 .org-link {
@@ -63,9 +87,10 @@ section {
 section h2 {
     margin: 0 0 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.28);
     font-size: 1.15rem;
     font-weight: 600;
+    color: #fff;
 }
 
 .grid {
@@ -79,13 +104,14 @@ section h2 {
     flex-direction: column;
     gap: 0.4rem;
     padding: 1.1rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: rgba(10, 12, 18, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 8px;
+    backdrop-filter: blur(10px);
 }
 
 .card:hover {
-    border-color: var(--accent);
+    border-color: #fff;
 }
 
 .card-image {
@@ -104,19 +130,19 @@ section h2 {
 
 .card-desc {
     margin: 0;
-    color: var(--text);
+    color: #fff;
     font-size: 0.9rem;
 }
 
 .card-note {
     margin: 0;
-    color: var(--text-muted);
+    color: #dce6f2;
     font-size: 0.8rem;
 }
 
 .site-footer {
     padding: 1.5rem 0 3rem;
-    border-top: 1px solid var(--border);
-    color: var(--text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    color: #eaf2fb;
     font-size: 0.85rem;
 }
