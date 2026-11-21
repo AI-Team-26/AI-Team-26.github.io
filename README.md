@@ -23,6 +23,20 @@ The list is written by hand. This keeps the page simple and lets us add custom t
 3. Copy an existing `<article class="card">` block and change the title, link, description and note.
 4. Add a note like `C# · small tools` in `<p class="card-note">` when it helps.
 
+### Mark a repository as featured
+
+Add the `starred` class to the card and a star inside it:
+
+```html
+<article class="card starred">
+    <span class="star" title="Featured">★</span>
+    <h3><a href="...">repo-name</a></h3>
+    ...
+</article>
+```
+
+A starred card gets a gold border and a star in the top right corner.
+
 ### Add an image to a card
 
 1. Put the file in the `images/` folder, for example `images/ai.models-evaluator.png`.

@@ -109,6 +109,28 @@ section h2 {
     border-color: #fff;
 }
 
+.card.starred {
+    position: relative;
+    border-color: rgba(255, 209, 102, 0.75);
+}
+
+.card.starred:hover {
+    border-color: #ffd166;
+}
+
+.card.starred h3 {
+    padding-right: 1.4rem;
+}
+
+.card .star {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.9rem;
+    color: #ffd166;
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
 .card-image {
     width: 100%;
     height: 120px;
