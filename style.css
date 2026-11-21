@@ -100,13 +100,13 @@ section h2 {
     gap: 0.4rem;
     padding: 1.1rem;
     background: rgba(10, 12, 18, 0.72);
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    border: 2px solid rgba(255, 255, 255, 0.22);
     border-radius: 8px;
     backdrop-filter: blur(10px);
 }
 
 .card:hover {
-    border-color: #fff;
+    border-color: #ffffffb7;
 }
 
 .card.starred {
@@ -124,11 +124,12 @@ section h2 {
 
 .card .star {
     position: absolute;
-    top: 0.85rem;
-    right: 0.9rem;
+    top: -0.1rem;
+    right: 0.2rem;
     color: #ffd166;
-    font-size: 0.95rem;
+    font-size: 1.9rem;
     line-height: 1;
+    text-shadow: #fff9e593 1px 1px 2px;
 }
 
 .card-image {
